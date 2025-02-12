@@ -31,5 +31,5 @@ branches:
   hotfix:
     regex: ^hotfix(es)?[/-]
     increment: Patch
-    source-branches: ['main', 'master']
+    source-branches: ['main']
     is-release-branch: false 
