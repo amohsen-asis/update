@@ -2,7 +2,6 @@ mode: Mainline
 assembly-versioning-scheme: MajorMinorPatch
 assembly-file-versioning-scheme: MajorMinorPatchTag
 assembly-informational-format: '{MajorMinorPatch}'
-increment: Patch
 
 # Version increment rules
 major-version-bump-message: '^(breaking|major):'
@@ -10,23 +9,14 @@ minor-version-bump-message: '^(feature|minor):'
 patch-version-bump-message: '^(fix|patch):'
 no-bump-message: '^(none|skip):'
 
-# Assembly versioning (stable)
-assembly-version: 1.0.0.0
-
 branches:
   main:
     regex: ^master$|^main$
     mode: ContinuousDelivery
     increment: Patch
-    prevent-increment-of-merged-branch-version: true
-    track-merge-target: false
     is-release-branch: true
-    source-branches: []
   develop:
     regex: ^dev(elop)?(ment)?$
     mode: ContinuousDeployment
     increment: Minor
-    prevent-increment-of-merged-branch-version: false
-    track-merge-target: true
-    source-branches: []
     is-release-branch: false 
