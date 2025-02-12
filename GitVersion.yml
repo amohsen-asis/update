@@ -3,20 +3,36 @@ assembly-versioning-scheme: MajorMinorPatch
 assembly-file-versioning-scheme: MajorMinorPatchTag
 assembly-informational-format: '{MajorMinorPatch}'
 
+# Starting version
+next-version: 1.0.0
+
 # Version increment rules
-major-version-bump-message: '^(breaking|major):'
-minor-version-bump-message: '^(feature|minor):'
-patch-version-bump-message: '^(fix|patch):'
-no-bump-message: '^(none|skip):'
+major-version-bump-message: '^(breaking|major):'  # Breaking changes that are not backwards compatible
+minor-version-bump-message: '^(feature|minor|feat):'  # New features that are backwards compatible
+patch-version-bump-message: '^(fix|patch|bugfix):'  # Bug fixes and patches
+no-bump-message: '^(none|skip|docs|style|refactor|test|chore):'  # Changes that don't affect versioning
+
+# Default tag for continuous delivery
+continuous-delivery-fallback-tag: ''
 
 branches:
   main:
     regex: ^master$|^main$
     mode: ContinuousDelivery
-    increment: Patch
+    increment: Patch  # Only increment patch version for fixes on main
     is-release-branch: true
   develop:
     regex: ^dev(elop)?(ment)?$
     mode: ContinuousDeployment
-    increment: Minor
+    increment: Minor  # Feature development happens in develop branch
+    is-release-branch: false
+  feature:
+    regex: ^features?[/-]
+    mode: ContinuousDeployment
+    increment: Inherit
+    source-branches: ['develop']
+  hotfix:
+    regex: ^hotfix(es)?[/-]
+    increment: Patch
+    source-branches: ['main', 'master']
     is-release-branch: false 
