@@ -11,8 +11,6 @@ C:\Users\A.Mohsen\source\repos\update\bin\Debug\net8.0\Swashbuckle.AspNetCore.Sw
 C:\Users\A.Mohsen\source\repos\update\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\A.Mohsen\source\repos\update\obj\Debug\net8.0\WebApi.csproj.AssemblyReference.cache
 C:\Users\A.Mohsen\source\repos\update\obj\Debug\net8.0\WebApi.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\A.Mohsen\source\repos\update\obj\Debug\net8.0\WebApi.AssemblyInfoInputs.cache
-C:\Users\A.Mohsen\source\repos\update\obj\Debug\net8.0\WebApi.AssemblyInfo.cs
 C:\Users\A.Mohsen\source\repos\update\obj\Debug\net8.0\WebApi.csproj.CoreCompileInputs.cache
 C:\Users\A.Mohsen\source\repos\update\obj\Debug\net8.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\A.Mohsen\source\repos\update\obj\Debug\net8.0\WebApi.MvcApplicationPartsAssemblyInfo.cache
@@ -32,3 +30,6 @@ C:\Users\A.Mohsen\source\repos\update\obj\Debug\net8.0\refint\WebApi.dll
 C:\Users\A.Mohsen\source\repos\update\obj\Debug\net8.0\WebApi.pdb
 C:\Users\A.Mohsen\source\repos\update\obj\Debug\net8.0\WebApi.genruntimeconfig.cache
 C:\Users\A.Mohsen\source\repos\update\obj\Debug\net8.0\ref\WebApi.dll
+C:\Users\A.Mohsen\source\repos\update\obj\Debug\net8.0\GitVersionInformation.g.cs
+C:\Users\A.Mohsen\source\repos\update\obj\Debug\net8.0\AssemblyInfo.g.cs
+C:\Users\A.Mohsen\source\repos\update\obj\Debug\net8.0\WebApi.sourcelink.json

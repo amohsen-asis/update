@@ -29,4 +29,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - N/A
 
+### feature/first-feature (1.1.0-alpha)
+- First feature changes
+- Will become 1.1.0 when merged to main
+
+### feature/second-feature (1.1.0-alpha)
+- Second feature changes
+- Will also become 1.1.0 when merged to main
+- (Might need rebase after first feature is merged)
+
+### Future
+- After 1.1.0 release, new features will start at 1.2.0-alpha
+
+## [1.0.0] - YYYY-MM-DD
+- Initial release
+
 [Unreleased]: https://github.com/username/repository/compare/v0.1.0...HEAD 

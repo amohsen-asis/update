@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "BB9J8t/AYro=",
+  "dgSpecHash": "9eZ8mpDNhC0=",
   "success": true,
   "projectFilePath": "C:\\Users\\A.Mohsen\\source\\repos\\update\\WebApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\A.Mohsen\\.nuget\\packages\\gitversion.msbuild\\5.12.0\\gitversion.msbuild.5.12.0.nupkg.sha512",
     "C:\\Users\\A.Mohsen\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.0\\microsoft.aspnetcore.openapi.8.0.0.nupkg.sha512",
     "C:\\Users\\A.Mohsen\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\A.Mohsen\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",

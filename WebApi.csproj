@@ -7,13 +7,15 @@
     <InvariantGlobalization>true</InvariantGlobalization>
     
     <!-- Version Control -->
-    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <GenerateAssemblyVersionAttribute>true</GenerateAssemblyVersionAttribute>
-    <GenerateAssemblyFileVersionAttribute>true</GenerateAssemblyFileVersionAttribute>
-    <GenerateAssemblyInformationalVersionAttribute>true</GenerateAssemblyInformationalVersionAttribute>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
     
-    <!-- Fixed Assembly Version (stable for runtime) -->
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <!-- Let GitVersion control these versions -->
+    <UpdateAssemblyInfo>true</UpdateAssemblyInfo>
+    <GetVersion>false</GetVersion>
+    <GenerateGitVersionInformation>true</GenerateGitVersionInformation>
     
     <!-- Product information -->
     <Product>WebApi</Product>

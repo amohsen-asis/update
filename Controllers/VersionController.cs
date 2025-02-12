@@ -8,34 +8,31 @@ namespace WebApi.Controllers;
 public class VersionController : ControllerBase
 {
     [HttpGet]
-    public IActionResult Get()
+    public IActionResult GetVersion()
     {
         var assembly = Assembly.GetExecutingAssembly();
-
-        var productVersion = assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()
-            ?.InformationalVersion ?? "1.0.0";
         
-        var fileVersion = assembly.GetCustomAttribute<AssemblyFileVersionAttribute>()
-            ?.Version ?? "1.0.0.0";
-        
-        var assemblyVersion = assembly.GetName().Version?.ToString() ?? "1.0.0.0";
-
         return Ok(new
         {
-            // Product Version (for marketing/product managers) - Changes frequently
-            ProductVersion = productVersion,
+            // Assembly Version (for .NET runtime)
+            AssemblyVersion = assembly.GetName().Version?.ToString(),
             
-            // File Version (for IT/deployment) - Changes with builds
-            FileVersion = fileVersion,
+            // File Version (for builds)
+            FileVersion = assembly.GetCustomAttribute<AssemblyFileVersionAttribute>()?.Version,
             
-            // Assembly Version (for .NET runtime) - Remains stable
-            AssemblyVersion = assemblyVersion,
+            // Informational Version (from GitVersion)
+            InformationalVersion = assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion,
             
-            // Product details
-            Product = assembly.GetCustomAttribute<AssemblyProductAttribute>()?.Product,
-            Company = assembly.GetCustomAttribute<AssemblyCompanyAttribute>()?.Company,
-            Copyright = assembly.GetCustomAttribute<AssemblyCopyrightAttribute>()?.Copyright,
-            Description = assembly.GetCustomAttribute<AssemblyDescriptionAttribute>()?.Description
+            // Branch information
+            Branch = Environment.GetEnvironmentVariable("GITVERSION_BRANCHNAME") ?? "unknown",
+            
+            // Build metadata
+            BuildMetadata = new
+            {
+                Product = assembly.GetCustomAttribute<AssemblyProductAttribute>()?.Product,
+                Company = assembly.GetCustomAttribute<AssemblyCompanyAttribute>()?.Company,
+                Copyright = assembly.GetCustomAttribute<AssemblyCopyrightAttribute>()?.Copyright
+            }
         });
     }
 } 
